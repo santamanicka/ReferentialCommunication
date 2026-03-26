@@ -1,0 +1,22 @@
+# Build artifacts
+*.o
+*.exe
+Comm
+Analysis
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+*.swp
+*.swo
+*~
+
+# Run output directories
+Run*/
+
+# Data files
+*.ns
+*.csv
