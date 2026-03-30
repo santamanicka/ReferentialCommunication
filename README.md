@@ -69,6 +69,16 @@ The Analysis executable loads evolved agent parameters and records detailed tria
 
 Output CSV files contain per-timestep recordings of all agent variables for each trial.
 
+### Information-Theoretic Analysis
+
+The `analysis/` directory contains Mathematica notebooks for information-theoretic analysis of evolved agent behavior:
+
+- `analysis_v1.nb` — initial analysis notebook
+- `analysis_v2.nb` — extended analysis with mutual information measures
+- `data/` — precomputed mutual information variables (43 `.dat` files)
+
+These notebooks compute mutual information between agent variables (neuron outputs, sensor inputs, positions, velocities) and task-relevant quantities (target location, distance to target) to characterize the information flow underlying referential communication. Requires Wolfram Mathematica.
+
 ## Configuration
 
 Key parameters are defined in `src/globals.h`:
@@ -101,6 +111,10 @@ src/
   random.h/.cpp         - Random number generation (Numerical Recipes)
   globals.h             - Global simulation parameters and configuration
   tree.hh               - Tree data structure for lineage tracking
+analysis/
+  analysis_v1.nb        - Mathematica notebook: initial information-theoretic analysis
+  analysis_v2.nb        - Mathematica notebook: extended mutual information analysis
+  data/                 - Precomputed mutual information variables (.dat files)
 Run.sh                  - Convenience script for launching runs
 Makefile                - Build configuration
 ```

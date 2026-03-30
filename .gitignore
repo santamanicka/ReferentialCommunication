@@ -1,8 +1,12 @@
 # Build artifacts
 *.o
 *.exe
-Comm
-Analysis
+/Comm
+/Analysis
+!analysis/
+
+# Large recording files (>100MB, exceed GitHub limit)
+analysis/data/RecordingFiles*.dat
 
 # OS files
 .DS_Store
